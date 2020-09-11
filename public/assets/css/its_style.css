@@ -1,4 +1,58 @@
 /*********************************************************************************
+                                  Our Services
+**********************************************************************************/
+.its_our_services_main_content {
+  padding: 3% 0 40px 0;
+}
+.its_our_services_heading {
+  text-align: center;
+  font-size: 37;
+  color: #284b7f;
+  font-family: "Merriweather", serif;
+}
+.its_our_services_content {
+  padding-top: 2%;
+}
+.its_our_services_icon1 {
+  text-align: center;
+}
+.its_our_services_icon1 img {
+  width: 60px;
+}
+.its_our_services_sub_heading_one {
+  padding: 3%;
+}
+.its_our_services_sub_heading_one h2 {
+  color: #3c3c3c;
+  font-family: "Merriweather", regular;
+  font-size: 22px;
+  text-align: center;
+}
+.its_our_services_sub_heading_one p {
+  padding-top: 1%;
+  font-size: 16;
+  text-align: center;
+  color: #3c3c3c;
+  font-family: ff-tisa-web-pro, serif, "TisaWeb W03 Light";
+}
+.its_our_services_content_two {
+  padding-top: 7%;
+}
+.its_our_services_content_three {
+  padding-top: 7%;
+}
+.its_our_services_horizontal_line {
+  height: 1px;
+  background-color: #284b7f;
+  margin: 10px 10px 10px 10px;
+}
+.its_our_services_vertical_line {
+  width: 1px;
+  background-color: #284b7f;
+  margin: 10px 10px 10px 10px;
+}
+
+/*********************************************************************************
                                   Contact Us
 **********************************************************************************/
 .contact-us {

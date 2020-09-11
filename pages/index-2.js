@@ -3,9 +3,11 @@ import ContactUs from "../components/Its_Contact _Us";
 import AboutUs from "../components/Its_About_Us";
 import LatestWork from "../components/Its_Latest_Work";
 import IndustriesWeServe from "../components/Its_Industries";
+import OurServices from "../components/Its_Our_Services";
 
 const HomePageTwo = () => (
   <Layout pageTitle="Invincible Tech System - Home 2">
+    <OurServices />
     <ContactUs />
     <AboutUs />
     <LatestWork />

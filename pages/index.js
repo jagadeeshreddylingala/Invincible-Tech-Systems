@@ -15,26 +15,14 @@ import Faq from "../components/Faq";
 import NewsHome from "../components/NewsHome";
 import Subscribe from "../components/Subscribe";
 
+import Clients from "../components/INS_Development/INS_Clients";
+
 
 
 const HomePage = () => (
 
     <Layout pageTitle="Dimon - React Next App Landing Page Template">
-        <NavOne />
-        <Banner />
-        <Features />
-        <Video />
-        <CallToAction />
-        <CallToActionTwo />
-        <Pricing />
-        <Testimonial />
-        <Brands />
-        <Counter />
-        <Screenshots />
-        <Faq />
-        <NewsHome />
-        <Subscribe />
-        <Footer />
+       <Clients/>
     </Layout>
 
 )

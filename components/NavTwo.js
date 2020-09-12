@@ -6,17 +6,10 @@ export default class NavTwo extends Component {
     super();
     this.state = {
       sticky: false,
-      data: [],
     };
   }
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
-    let postUrl = `https://backend-dev.invincibletechsystems.com/wp-json/wp/v2/pages?slug="home-navigation"`;
-    fetch(postUrl)
-      .then((data) => data.json())
-      .then((data) => {
-        this.setState({ data: data });
-      });
 
     //Mobile Menu
     this.mobileMenu();
@@ -52,14 +45,34 @@ export default class NavTwo extends Component {
             this.state.sticky ? "stricked-menu stricky-fixed" : ""
           }`}
         >
-          <div>
-            {this.state.data.map((post, index) => (
-              <div key={index}>
-                <p
-                  dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+          <div className="container clearfix">
+            <div className="logo-box clearfix">
+              <a className="navbar-brand" href="/">
+                <img
+                  src="/assets/images/invincible-images/Image 1@2x.jpg"
+                  alt=""
                 />
-              </div>
-            ))}
+              </a>
+            </div>
+            <div className="main-navigation">
+              <ul className=" one-page-scroll-menu navigation-box">
+                <li className="current scrollToLink">
+                  <a href="/">Company</a>
+                </li>
+                <li className="scrollToLink">
+                  <a href="#">Services</a>
+                </li>
+                <li className="scrollToLink">
+                  <a href="#">Our Work</a>
+                </li>
+                <li className="scrollToLink">
+                  <a href="#">Careers</a>
+                </li>
+                <li className="scrollToLink">
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>

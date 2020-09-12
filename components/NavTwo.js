@@ -35,6 +35,11 @@ export default class NavTwo extends Component {
     //Mobile Menu Toggle
     let mainNavToggler = document.querySelector(".menu-toggler");
     let mainNav = document.querySelector(".main-navigation");
+
+    mainNavToggler.addEventListener("click", function () {
+      mainNav.style.display =
+        mainNav.style.display != "block" ? "block" : "none";
+    });
   };
 
   render() {
@@ -53,6 +58,9 @@ export default class NavTwo extends Component {
                   alt=""
                 />
               </a>
+              <button className="menu-toggler" data-target=".main-navigation">
+                <span className="fa fa-bars"></span>
+              </button>
             </div>
             <div className="main-navigation">
               <ul className=" one-page-scroll-menu navigation-box">

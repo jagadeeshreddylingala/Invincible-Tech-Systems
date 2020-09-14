@@ -6,6 +6,7 @@ import IndustriesWeServe from "../components/Its_Industries";
 import OurServices from "../components/Its_Our_Services";
 import HomeBanner from "../components/Its_Home_Banner";
 import NavTwo from "../components/NavTwo";
+import Clients from "../components/Its_Clients";
 
 const HomePageTwo = () => (
   <Layout pageTitle="Invincible Tech System - Home 2">
@@ -16,6 +17,7 @@ const HomePageTwo = () => (
     <AboutUs />
     <LatestWork />
     <IndustriesWeServe />
+    <Clients />
   </Layout>
 );
 

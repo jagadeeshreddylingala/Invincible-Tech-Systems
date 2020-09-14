@@ -15,14 +15,19 @@ const [state,setState] = useState([]) ;
       });
   }, []);
 
-  console.log("Clients", state);
+  console.log("state", state);
 
   const Clientsdata1 = state !==[] && state.map(list => {
-    return list.content.rendered.toString().split("<p>")[0]
+    return list.content.rendered.toString().split("<p>")
   });
+
+  console.log("Clientsdata1", Clientsdata1)
 
 
   	const clients0 =  state !==[] && Clientsdata1 !== "" && Clientsdata1
+
+     console.log("clients0", clients0)
+
 
   	 const clients1 = state !==[] && state.map(list => {
 		return list.content.rendered.toString().split("</p>")[1]
@@ -63,6 +68,22 @@ const [state,setState] = useState([]) ;
 	/*const clients6 =  state !==[] && Clientsdata1 !== "" && Clientsdata1.toString().split("</p>")[1]
 
 */
+
+
+if(state !==[] && state !=="" ){
+  const array = state !==[] && state.map(list => {
+    return list.content.rendered.toString().split("<p>")
+  });
+
+  console.log("lenght", array.length)
+  for (var i = 0; i<array.length; i++) {
+    console.log("in for loppppppppppppppppppppp")
+       state !==[] && state.map(list => {
+    console.log("for loop", list.content.rendered.toString().split("</p>")[i]);
+  });
+    
+  }
+}
 
 console.log("clients======>",Clientsdata1)
 

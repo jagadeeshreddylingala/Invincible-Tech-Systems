@@ -6,6 +6,8 @@ const Clients = () => {
 
 const [state,setState] = useState([]) ;
 
+const [newarray, setNewarray ] = useState(["0","1","2" , "3", "4"])
+
 	useEffect(() => {
     let postUrl = `https://backend-dev.invincibletechsystems.com/wp-json/wp/v2/pages?slug="clients"`;
     fetch(postUrl)
@@ -18,10 +20,18 @@ const [state,setState] = useState([]) ;
   console.log("state", state);
 
   const Clientsdata1 = state !==[] && state.map(list => {
-    return list.content.rendered.toString().split("<p>")
+    return list.content.rendered.split("<p>")
   });
 
-  console.log("Clientsdata1", Clientsdata1)
+   const Clientsdatapicture = state !==[] && state.map(list => {
+    return list.content.rendered.toString().split("<p></p>")
+  });
+
+   console.log("Clientsdatapicture", Clientsdatapicture[0])
+
+  console.log("Clientsdata1", Clientsdata1.length)
+
+  console.log("newarray", newarray)
 
 
   	const clients0 =  state !==[] && Clientsdata1 !== "" && Clientsdata1
@@ -85,7 +95,7 @@ if(state !==[] && state !=="" ){
   }
 }
 
-console.log("clients======>",Clientsdata1)
+console.log("clients======>",Clientsdata1.length)
 
 console.log("clients ********************",  clients1)
 
